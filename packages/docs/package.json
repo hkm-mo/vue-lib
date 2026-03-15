@@ -1,0 +1,16 @@
+{
+  "name": "@my-lib/docs",
+  "private": true,
+  "scripts": {
+    "docs:dev": "npm run build:api && vitepress dev src",
+    "docs:build": "npm run build:api && vitepress build src",
+    "build:api": "typedoc"
+  },
+  "devDependencies": {
+    "vitepress": "latest",
+    "typedoc": "latest",
+    "typedoc-plugin-markdown": "latest",
+    "typedoc-vitepress-theme": "latest",
+    "vue": "latest"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "my-vue-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/core",
+    "packages/storybook",
+    "packages/preview",
+    "packages/docs"
+  ],
+  "scripts": {
+    "dev:core": "npm run dev -w @my-lib/core",
+    "dev:docs": "npm run dev -w @my-lib/docs",
+    "dev:storybook": "npm run storybook -w @my-lib/storybook",
+    "dev:preview": "npm run dev -w @my-lib/preview",
+    "build": "npm run build --workspaces"
+  }
+}

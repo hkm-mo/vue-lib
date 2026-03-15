@@ -1,0 +1,19 @@
+{
+  "name": "@my-lib/preview",
+  "version": "1.0.0",
+  "description": "Preview application for the core vueLib2 library.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@my-lib/core": "*",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
