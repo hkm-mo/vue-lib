@@ -7,9 +7,10 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
+      rollupTypes: true, // Generates a single .d.ts file for the entire library
       insertTypesEntry: true, // Adds "types" line to package.json if missing
-      cleanVueFileName: true, // Removes the .vue extension from declarations
-      strictOutput: true,
+      // cleanVueFileName: true, // Removes the .vue extension from declarations
+      strictOutput: true, // Ensures that the output .d.ts file is strictly typed
       include: ['src/**/*.ts', 'src/**/*.vue'],
     })
   ],
