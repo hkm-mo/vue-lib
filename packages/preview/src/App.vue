@@ -1,5 +1,5 @@
-<script setup>
-import { MyButton, MyImage, MyInput } from '@my-lib/core'
+<script setup lang="ts">
+import { MyButton, MyHeading, MyImage, MyInput } from '@my-lib/core'
 </script>
 
 <template>
@@ -8,6 +8,7 @@ import { MyButton, MyImage, MyInput } from '@my-lib/core'
     <MyButton label="Yess" />
     <MyImage src="https://via.placeholder.com/150" alt="Placeholder Image" />
     <MyInput label="Click Me" />
+    <MyHeading heading-class="dd" tag="ss">This is a Heading</MyHeading>
     <div>
       <h2>Another Button</h2>
       <MyButton />

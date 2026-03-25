@@ -10,3 +10,5 @@ export {
 export { default as MyImage } from './components/MyImage.vue';
 
 export { default as MyInput } from './components/MyInput.vue';
+
+export { default as MyHeading } from './components/MyHeading.vue';
