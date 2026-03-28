@@ -1,6 +1,4 @@
-import type { Preview } from "@storybook/vue3";
-// Import global CSS from core if you have any
-// import "@my-lib/core/dist/style.css";
+import type { Preview } from '@storybook/vue3-vite'
 
 const preview: Preview = {
   parameters: {
@@ -10,7 +8,14 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-  },
-};
 
-export default preview;
+    a11y: {
+      // 'todo' - show a11y violations in the test UI only
+      // 'error' - fail CI on a11y violations
+      // 'off' - skip a11y checks entirely
+      test: 'todo',
+    },
+  },
+}
+
+export default preview

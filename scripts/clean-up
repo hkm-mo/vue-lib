@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Remove node_modules from root directory
+if [ -d "node_modules" ]; then
+  echo "Removing root node_modules..."
+  rm -rf "node_modules"
+fi
+
+# Remove node_modules from all packages subdirectories
+for dir in packages/*/; do
+  if [ -d "${dir}node_modules" ]; then
+    echo "Removing ${dir}node_modules..."
+    rm -rf "${dir}node_modules"
+  fi
+done
+
+# Remove package-lock.json files
+if [ -f "package-lock.json" ]; then
+  echo "Removing root package-lock.json..."
+  rm "package-lock.json"
+fi
+
+for dir in packages/*/; do
+  if [ -f "${dir}package-lock.json" ]; then
+    echo "Removing ${dir}package-lock.json..."
+    rm "${dir}package-lock.json"
+  fi
+done
+
+echo "Cleanup complete!"

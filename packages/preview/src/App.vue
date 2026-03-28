@@ -7,7 +7,7 @@ import { MyButton, MyHeading, MyImage, MyInput } from '@my-lib/core'
     <h1>Preview App</h1>
     <MyButton label="Yess" />
     <MyImage src="https://via.placeholder.com/150" alt="Placeholder Image" />
-    <MyInput label="Click Me" />
+    <MyInput label="Click Me" @click="console.log" />
     <MyHeading heading-class="dd" tag="ss">This is a Heading</MyHeading>
     <div>
       <h2>Another Button</h2>
