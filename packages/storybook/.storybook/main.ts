@@ -26,6 +26,24 @@ const config: StorybookConfig = {
   core: {
     builder: '@storybook/builder-vite',
   },
-
+  viteFinal: async (config) => {
+    return {
+      ...config,
+      plugins: [
+        ...(config.plugins || []),
+        {
+          name: "fix-mdx-react-shim",
+          enforce: "pre",
+          resolveId(source) {
+            if (source.startsWith("file:///") && source.includes("mdx-react-shim.js")) {
+              console.log(`Resolving ${source} to ${source.substring(8)}`);
+              return source.substring(8);
+            }
+            return null;
+          },
+        },
+      ],
+    };
+  },
 };
 export default config;

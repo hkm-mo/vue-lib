@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Change to the parent directory (project root)
+cd "$SCRIPT_DIR/.."
+
 # Remove node_modules from root directory
 if [ -d "node_modules" ]; then
   echo "Removing root node_modules..."

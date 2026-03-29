@@ -1,4 +1,9 @@
 @echo off
+REM Get the directory where this script is located
+set SCRIPT_DIR=%~dp0
+REM Change to the parent directory (project root)
+cd /d "%SCRIPT_DIR%.."
+
 REM Remove node_modules from root directory
 if exist "node_modules" (
   echo Removing root node_modules...

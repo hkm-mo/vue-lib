@@ -13,6 +13,6 @@
     "dev:storybook": "npm run storybook -w @my-lib/storybook",
     "dev:preview": "npm run dev -w @my-lib/preview",
     "build": "npm run build --workspaces",
-    "clean-up:node-modules": "../scripts/clean-up"
+    "clean-up:node-modules": "cd scripts && clean-up"
   }
 }
