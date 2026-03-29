@@ -7,6 +7,7 @@ const root = typeof __dirname !== 'undefined' ? __dirname : dirname(fileURLToPat
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
+  publicDir: './storybook-static',
   resolve: {
     dedupe: ['vue'],
     preserveSymlinks: true,
