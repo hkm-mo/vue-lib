@@ -11,7 +11,21 @@ export default defineConfig({
     dedupe: ['vue'],
     preserveSymlinks: true,
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    {
+      name: "fix-mdx-react-shim",
+      enforce: "pre",
+      resolveId(source) {
+        if (source.startsWith("file:///") && source.includes("mdx-react-shim.js")) {
+          const systemPath = fileURLToPath(source);
+          console.log(`Resolving ${source} to ${systemPath}`);
+          return systemPath;
+        }
+        return null;
+      },
+    },
+  ],
   build: {
     rollupOptions: {
       // Externalize dependencies that shouldn't be bundled

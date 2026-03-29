@@ -12,6 +12,7 @@
     "dev:docs": "npm run dev -w @my-lib/docs",
     "dev:storybook": "npm run storybook -w @my-lib/storybook",
     "dev:preview": "npm run dev -w @my-lib/preview",
+    "build:storybook": "npm run build-storybook -w @my-lib/storybook",
     "build": "npm run build --workspaces",
     "clean-up:node-modules": "cd scripts && clean-up"
   }
