@@ -12,6 +12,11 @@ export default defineConfig({
     dedupe: ['vue'],
     preserveSymlinks: true,
   },
+  css: {
+    preprocessorOptions: {
+      less: {}
+    }
+  },
   plugins: [
     vue(),
     {

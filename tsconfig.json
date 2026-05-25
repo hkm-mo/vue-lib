@@ -24,7 +24,6 @@
       "DOM.Iterable"
     ],
     /* Workspace Paths (Crucial for IDE support) */
-    "baseUrl": ".",
     "paths": {}
   },
   "exclude": [
